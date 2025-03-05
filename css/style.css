@@ -1,0 +1,85 @@
+header{
+    height: 70px;
+    display: flex;
+    background-color: #d6c9ff;
+    align-items: center;
+}
+
+.titleheader{
+    margin-left: 450px;
+    font-size: 30px;
+    color: rgb(88, 88, 88);
+}
+
+body{
+    background-color: rgb(230, 230, 230);
+}
+
+.divfor{
+    background-color: white;
+    width: 20%;
+    border-radius: 10%;
+}
+
+.navbody{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divllista{
+    background-color: white;
+    width: 75%;
+    border-radius: 10px;
+    margin-bottom: 220px;
+
+}
+
+input{
+    margin-bottom: 5%;
+}
+
+label{
+    margin-top: 5%;
+}
+
+select{
+    margin-bottom: 5%;
+    width: 155px;
+}
+
+.buttonfor{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    width: 155px;
+    background-color: rgb(108, 108, 235);
+    color: white;
+    border-color: rgb(108, 108, 235);
+    transition: width 0.3s ease ;
+}
+
+.buttonfor:hover{
+    width: 165px;
+}
+
+.buttonllista{
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: rgb(53, 110, 53);
+    color: white;
+    border-color: rgb(53, 110, 53);
+    border-radius: 5px;
+    width: 155px;
+    height: 30px;
+    transition: width 0.3s ease ;
+}
+
+.buttonllista:hover{
+    width: 165px;
+}
+
+ul{
+    list-style: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Concesionari</title>
+    </head>
+    <body>
+        <header>
+            <nav class="logo">
+                <img src="/sources/images/Rafelbg.png" height="50" width="100">
+                    <i class="titleheader">Concesionari</i>
+            </nav>
+        </header>
+        <button id="mostrarllista" class="buttonllista">Mostrar vehicles</button>
+        <nav class="navbody">
+            <div class="divfor">
+                <form id = "Formcotxe">
+                    <ul>
+                        <li>
+                            <label for="clase">Tipo</label>
+                            <br><select id="tipus">
+                                <option>Cotxe</option>
+                                <option>Moto</option>
+                                <option>Camion</option>
+                              </select>
+                        </li>
+                        <li>
+                            <label for="clase">Marca</label>
+                            <br><input type="text" name="marca" id="marca" placeholder="marca del vehicle">
+                        </li>
+                        <li>
+                            <label for="clase">Model</label>
+                            <br><input type="text" name="Model" id="model" placeholder="model del vehicle">
+                        </li>
+                        <li>
+                            <label for="clase" >Any</label>
+                            <br><input type="text" name="any" id="any" placeholder="any del vehicle">
+                        </li>
+                        <li>
+                            <label for="clase" >Portes</label>
+                            <br><input type="text" name="portes" id="portes" placeholder="portes del vehicle">
+                        </li>
+                        <li>
+                            <button type="submit" class="buttonfor">Crear vehicle</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        
+            <div id="divllista" class="divllista">
+                <h3>Llista de objectes:</h3>
+                <div id= "resultat"></div>
+                <script src="/javascript/basedades.js"></script>
+                <script src="/javascript/script.js"></script>
+            </div>
+        </nav>
+        
+
+    </body>
+</html>
