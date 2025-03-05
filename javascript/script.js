@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             vehicle = new camion(model, marca, any, portes); 
         }
 
+
         afegirVehicle(vehicle);
     });
 
