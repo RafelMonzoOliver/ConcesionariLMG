@@ -52,8 +52,9 @@ function mostrarLlista() {
         }
 
         vehicleDiv.innerHTML = `
-            <p><strong>Marca:</strong> ${vehicle.marca}</p>
-            <p><strong>Model:</strong> ${vehicle.model}</p>
+            <img src = /sources/images/car.jpg width='70px'>
+            <p><strong>Marca:</strong> ${vehicle.model}</p>
+            <p><strong>Model:</strong> ${vehicle.marca}</p>
             <p><strong>Any:</strong> ${vehicle.any}</p>
             ${extraInfo} <!-- Se muestra la propiedad correspondiente según el tipo -->
             <button onclick="borrarVehicle(${index})">Eliminar</button>
