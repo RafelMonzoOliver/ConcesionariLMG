@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const marca = document.getElementById("marca").value;
         const model = document.getElementById("model").value;
         const any = parseInt(document.getElementById("any").value);
-        const portes = parseInt(document.getElementById("portes").value);
+        const portes = document.getElementById("portes").value;
 
         let vehicle;
         if (tipus === "Cotxe") {
             vehicle = new cotxe(model, marca, any, portes);
         } else if (tipus === "Moto") {
-            vehicle = new moto(model, marca, any, tipus); 
+            vehicle = new moto(model, marca, any, portes); 
         } else if (tipus === "Camion") {
             vehicle = new camion(model, marca, any, portes); 
         }
@@ -42,21 +42,34 @@ function mostrarLlista() {
         vehicleDiv.classList.add("vehiclediv");
 
         let extraInfo = ""; 
+        let imatges = "";
 
         if (vehicle instanceof cotxe) {
-            extraInfo = `<p><strong>Portes:</strong> ${vehicle.portes}</p>`;
+            extraInfo = `${vehicle.portes} portes </p>`;
+            imatges = `<p><img src="/sources/images/cotxe.png" width="100px">`
         } else if (vehicle instanceof moto) {
-            extraInfo = `<p><strong>Tipus:</strong> ${vehicle.tipus}</p>`;
+            extraInfo = `<p> tipus ${vehicle.tipus} </p>`;
+            imatges = `<p><img src="/sources/images/moto.webp" width="100px">`;
         } else if (vehicle instanceof camion) {
-            extraInfo = `<p><strong>Capacitat:</strong> ${vehicle.capacitat}</p>`;
+            extraInfo = `${vehicle.capacitat}T pes</p>`;
+            imatges = `<p><img src="/sources/images/camion.png" width="100px">`;
         }
 
         vehicleDiv.innerHTML = `
-            <p><strong>Marca:</strong> ${vehicle.marca}</p>
-            <p><strong>Model:</strong> ${vehicle.model}</p>
-            <p><strong>Any:</strong> ${vehicle.any}</p>
-            ${extraInfo} <!-- Se muestra la propiedad correspondiente según el tipo -->
-            <button onclick="borrarVehicle(${index})">Eliminar</button>
+            <div>
+                ${imatges}
+            </div>
+            <div>
+                <p><strong class="mayus"> ${vehicle.model}</strong></p>            
+                <p> (${vehicle.any})</p>
+            </div>
+            <div>
+                <p>${vehicle.marca}</p>
+                ${extraInfo}
+            </div>
+            <div>
+                <button onclick="borrarVehicle(${index})" class="delete"><img src=/sources/images/X.png class="crecer"></button>
+            </div>
         `;
         resultat.appendChild(vehicleDiv);
     });
