@@ -32,6 +32,13 @@ function camion(model,marca,any,capacitat){
     }
 }
 
+let objecte1 = new cotxe("Toyota","Corolla",2020,4);
+let objecte2 = new moto("R1","Yamaha",2015,"Esportiva");
+let objecte3 = new camion("FH16","Volvo",2018,20);
+
+Llistavehicles.push(objecte1);
+Llistavehicles.push(objecte2);
+Llistavehicles.push(objecte3);
 
 function afegirVehicle(vehicle){
     Llistavehicles.push(vehicle);
