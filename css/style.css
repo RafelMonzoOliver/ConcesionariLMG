@@ -5,6 +5,14 @@ header{
     align-items: center;
 }
 
+h3{
+    margin-left: 12px;
+}
+
+strong{
+    color: rgb(62, 85, 185);
+}
+
 .titleheader{
     margin-left: 450px;
     font-size: 30px;
@@ -29,6 +37,7 @@ body{
     align-items: center;
 }
 
+
 .divllista{
     background-color: white;
     width: 75%;
@@ -39,6 +48,11 @@ body{
 
 input{
     margin-bottom: 5%;
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color: rgb(235, 235, 235);
 }
 
 label{
@@ -48,6 +62,12 @@ label{
 select{
     margin-bottom: 5%;
     width: 155px;
+    transition: width 0.3s ease;
+}
+
+select:hover{
+    width: 165px;
+    background-position: rgb(235, 235, 235);
 }
 
 .buttonfor{
@@ -89,5 +109,28 @@ ul{
     padding:10px;
     margin:10px;
     border-radius:5px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(241, 241, 241);
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #787680;
+}
+
+.mayus{
+    text-transform: uppercase;
+}
+
+.delete{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.crecer{
+    width:20px;
+    transition: width 0.7 ease;
+}
+
+.crecer:hover{
+    width: 25px;
 }
